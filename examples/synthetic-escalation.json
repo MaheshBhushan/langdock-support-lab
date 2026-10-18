@@ -1,0 +1,185 @@
+{
+  "bundle_kind": "synthetic-escalation",
+  "evidence": [
+    {
+      "created_at": "2026-10-20T12:00:00.000Z",
+      "finished_at": "2026-10-20T12:00:00.000Z",
+      "id": "00000000-0000-0000-0000-000000000001",
+      "mode": "offline",
+      "observation": {
+        "attempt_count": 1,
+        "code": "UPSTREAM_PERMISSION",
+        "duration_ms": 0,
+        "message": "The upstream request was denied. Check scope and resource sharing.",
+        "nonempty_text": null,
+        "probe_expectation_met": null,
+        "response_shape_valid": null,
+        "result_count": null,
+        "retry_after_seconds": null,
+        "retryable": false,
+        "upstream_status": 403
+      },
+      "operation": "agent_completion",
+      "probe_id": "health-text",
+      "provenance": "synthetic",
+      "scenario_id": "permission-denied",
+      "status": "failed"
+    }
+  ],
+  "incident": {
+    "created_at": "2026-10-20T12:00:00.000Z",
+    "id": "00000000-0000-0000-0000-000000000002",
+    "impact": "Synthetic lab exercise; production impact not assessed.",
+    "state": "escalated",
+    "title": "Synthetic agent_completion UPSTREAM_PERMISSION",
+    "updated_at": "2026-10-20T12:00:00.000Z",
+    "version": 4
+  },
+  "limitations": [
+    "Synthetic fixture evidence; no provider request occurred.",
+    "Observations do not prove root cause.",
+    "Guidance has synthetic-lab-review provenance; no provider endorsement.",
+    "Raw payloads, credentials, provider links, custom titles and configuration are omitted."
+  ],
+  "redaction": {
+    "custom_title_omitted": false,
+    "policy_version": 1,
+    "raw_payloads_included": false
+  },
+  "reproduction": [
+    "lab run --scenario permission-denied --operation agent_completion"
+  ],
+  "reviewed_guidance": [
+    {
+      "excerpt": "Escalate permission changes to the resource administrator. Record a fail or unknown applicable scope or sharing check before an admin_access_required escalation. The lab cannot change permissions.",
+      "id": "RB-PERMISSION:1:l2",
+      "review_due_at": "2027-04-16T22:34:47.285+00:00",
+      "review_kind": "synthetic-lab-review",
+      "review_status_at_triage": "eligible",
+      "reviewed_at": "2026-10-18T22:34:47.285+00:00",
+      "runbook_id": "RB-PERMISSION",
+      "section": "l2",
+      "sha256": "1da66a7784895355614241222526504f59d596113280a5ffb7d12f855e580910",
+      "title": "Permission and sharing checks"
+    }
+  ],
+  "schema_version": 1,
+  "timeline": [
+    {
+      "actor_role": "operator",
+      "created_at": "2026-10-20T12:00:00.000Z",
+      "id": "00000000-0000-0000-0000-000000000003",
+      "payload": {
+        "run_id": "00000000-0000-0000-0000-000000000001"
+      },
+      "sequence": 1,
+      "type": "created"
+    },
+    {
+      "actor_role": "operator",
+      "created_at": "2026-10-20T12:00:00.000Z",
+      "id": "00000000-0000-0000-0000-000000000004",
+      "payload": {
+        "check_id": "agent_shared",
+        "result": "unknown"
+      },
+      "sequence": 2,
+      "type": "check"
+    },
+    {
+      "actor_role": "operator",
+      "created_at": "2026-10-20T12:00:00.000Z",
+      "id": "00000000-0000-0000-0000-000000000005",
+      "payload": {
+        "triage": {
+          "citations": [
+            {
+              "excerpt": "Escalate permission changes to the resource administrator. Record a fail or unknown applicable scope or sharing check before an admin_access_required escalation. The lab cannot change permissions.",
+              "id": "RB-PERMISSION:1:l2",
+              "review_due_at": "2027-04-16T22:34:47.285+00:00",
+              "review_kind": "synthetic-lab-review",
+              "reviewed_at": "2026-10-18T22:34:47.285+00:00",
+              "runbook_id": "RB-PERMISSION",
+              "section": "l2",
+              "sha256": "1da66a7784895355614241222526504f59d596113280a5ffb7d12f855e580910",
+              "title": "Permission and sharing checks"
+            }
+          ],
+          "evidence_run_ids": [
+            "00000000-0000-0000-0000-000000000001"
+          ],
+          "facts": [
+            "Run 00000000-0000-0000-0000-000000000001: HTTP 403 was observed; observation UPSTREAM_PERMISSION."
+          ],
+          "hypotheses": [
+            "If scope or resource sharing is missing, an administrator may need to change configuration."
+          ],
+          "level": "L2",
+          "limitations": [
+            "Synthetic lab exercise; production impact not assessed.",
+            "Observations do not prove root cause. Checks are operator assertions."
+          ],
+          "observed_codes": [
+            "UPSTREAM_PERMISSION"
+          ],
+          "recommended_action": "escalate",
+          "suggested_checks": [
+            "agent_shared",
+            "required_scope_confirmed",
+            "subagents_shared"
+          ]
+        }
+      },
+      "sequence": 3,
+      "type": "triage"
+    },
+    {
+      "actor_role": "operator",
+      "created_at": "2026-10-20T12:00:00.000Z",
+      "id": "00000000-0000-0000-0000-000000000006",
+      "payload": {
+        "reason": "admin_access_required"
+      },
+      "sequence": 4,
+      "type": "escalate"
+    }
+  ],
+  "triage": {
+    "citations": [
+      {
+        "excerpt": "Escalate permission changes to the resource administrator. Record a fail or unknown applicable scope or sharing check before an admin_access_required escalation. The lab cannot change permissions.",
+        "id": "RB-PERMISSION:1:l2",
+        "review_due_at": "2027-04-16T22:34:47.285+00:00",
+        "review_kind": "synthetic-lab-review",
+        "reviewed_at": "2026-10-18T22:34:47.285+00:00",
+        "runbook_id": "RB-PERMISSION",
+        "section": "l2",
+        "sha256": "1da66a7784895355614241222526504f59d596113280a5ffb7d12f855e580910",
+        "title": "Permission and sharing checks"
+      }
+    ],
+    "evidence_run_ids": [
+      "00000000-0000-0000-0000-000000000001"
+    ],
+    "facts": [
+      "Run 00000000-0000-0000-0000-000000000001: HTTP 403 was observed; observation UPSTREAM_PERMISSION."
+    ],
+    "hypotheses": [
+      "If scope or resource sharing is missing, an administrator may need to change configuration."
+    ],
+    "level": "L2",
+    "limitations": [
+      "Synthetic lab exercise; production impact not assessed.",
+      "Observations do not prove root cause. Checks are operator assertions."
+    ],
+    "observed_codes": [
+      "UPSTREAM_PERMISSION"
+    ],
+    "recommended_action": "escalate",
+    "suggested_checks": [
+      "agent_shared",
+      "required_scope_confirmed",
+      "subagents_shared"
+    ]
+  }
+}

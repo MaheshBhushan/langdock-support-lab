@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "result": [
+    {
+      "id": "lab-chunk-auth",
+      "text": "LAB-RB-AUTH: Check whether backend credentials are configured. Never paste a key into an incident.",
+      "similarity": 0.9,
+      "subsource": "lab-attachment-auth",
+      "subname": "RB-AUTH.md",
+      "url": null,
+      "index": 0
+    }
+  ]
+}

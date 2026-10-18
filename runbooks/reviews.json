@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "entries": {
+    "RB-AUTH": {
+      "status": "reviewed",
+      "review_kind": "synthetic-lab-review",
+      "reviewer": "local-implementer",
+      "reviewed_at": "2026-10-18T22:34:47.115+00:00",
+      "review_due_at": "2027-04-16T22:34:47.115+00:00",
+      "sha256": "463af24d018360af207b9353f19ea61637c702f6a04af240e34e0dad1d9f2673",
+      "checks": {
+        "source_checked": true,
+        "steps_exercised": true,
+        "secret_safe": true,
+        "limits_stated": true
+      }
+    },
+    "RB-PERMISSION": {
+      "status": "reviewed",
+      "review_kind": "synthetic-lab-review",
+      "reviewer": "local-implementer",
+      "reviewed_at": "2026-10-18T22:34:47.285+00:00",
+      "review_due_at": "2027-04-16T22:34:47.285+00:00",
+      "sha256": "1da66a7784895355614241222526504f59d596113280a5ffb7d12f855e580910",
+      "checks": {
+        "source_checked": true,
+        "steps_exercised": true,
+        "secret_safe": true,
+        "limits_stated": true
+      }
+    },
+    "RB-THROTTLE": {
+      "status": "reviewed",
+      "review_kind": "synthetic-lab-review",
+      "reviewer": "local-implementer",
+      "reviewed_at": "2026-10-18T22:34:47.425+00:00",
+      "review_due_at": "2027-04-16T22:34:47.425+00:00",
+      "sha256": "8e8ba956dfe8629bd33b5a88be5439dc9505fcbcc81264902dc69140a95e17a3",
+      "checks": {
+        "source_checked": true,
+        "steps_exercised": true,
+        "secret_safe": true,
+        "limits_stated": true
+      }
+    },
+    "RB-TIMEOUT": {
+      "status": "reviewed",
+      "review_kind": "synthetic-lab-review",
+      "reviewer": "local-implementer",
+      "reviewed_at": "2026-10-18T22:34:47.557+00:00",
+      "review_due_at": "2027-04-16T22:34:47.557+00:00",
+      "sha256": "0f8f70ac8320818233eb903122e828f3574731acb9bf5320b4ebbaced47ccc84",
+      "checks": {
+        "source_checked": true,
+        "steps_exercised": true,
+        "secret_safe": true,
+        "limits_stated": true
+      }
+    },
+    "RB-SUCCESS": {
+      "status": "reviewed",
+      "review_kind": "synthetic-lab-review",
+      "reviewer": "local-implementer",
+      "reviewed_at": "2026-10-18T22:34:47.694+00:00",
+      "review_due_at": "2027-04-16T22:34:47.694+00:00",
+      "sha256": "f8fedde63801c4b8d2a30fe301e9cf65c4f04e665e8961640e54f4106663473c",
+      "checks": {
+        "source_checked": true,
+        "steps_exercised": true,
+        "secret_safe": true,
+        "limits_stated": true
+      }
+    }
+  }
+}

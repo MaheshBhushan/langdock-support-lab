@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "langdock-support-lab"
+version = "1.0.0"
+description = "Synthetic TARGET Langdock L1/L2 support practice backend"
+requires-python = ">=3.12"
+dependencies = ["fastapi", "pydantic>=2", "httpx", "uvicorn"]
+
+[project.scripts]
+lab = "langdock_support_lab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+addopts = "-m 'not live'"
+markers = ["live: explicitly authorized external verification"]
+testpaths = ["tests"]

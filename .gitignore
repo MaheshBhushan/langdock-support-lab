@@ -1,0 +1,16 @@
+.venv/
+.local/
+.env
+.env.*
+*.sqlite3
+*.sqlite3-*
+*.db
+*.log
+__pycache__/
+.pytest_cache/
+.coverage*
+htmlcov/
+build/
+dist/
+*.egg-info/
+.code-health-cache/

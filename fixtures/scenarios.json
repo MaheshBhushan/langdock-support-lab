@@ -1,0 +1,78 @@
+[
+  {
+    "id": "success",
+    "label": "Success",
+    "operations": [
+      "agent_completion",
+      "knowledge_search"
+    ],
+    "fault": "Valid synthetic response",
+    "expected_code": "OK",
+    "provenance": "synthetic"
+  },
+  {
+    "id": "auth-missing",
+    "label": "Auth Missing",
+    "operations": [
+      "agent_completion",
+      "knowledge_search"
+    ],
+    "fault": "Absent synthetic provider authorization",
+    "expected_code": "UPSTREAM_AUTH",
+    "provenance": "synthetic"
+  },
+  {
+    "id": "auth-invalid",
+    "label": "Auth Invalid",
+    "operations": [
+      "agent_completion",
+      "knowledge_search"
+    ],
+    "fault": "Invalid synthetic provider authorization",
+    "expected_code": "UPSTREAM_AUTH",
+    "provenance": "synthetic"
+  },
+  {
+    "id": "permission-denied",
+    "label": "Permission Denied",
+    "operations": [
+      "agent_completion",
+      "knowledge_search"
+    ],
+    "fault": "Synthetic permission denial; real Knowledge may omit inaccessible results",
+    "expected_code": "UPSTREAM_PERMISSION",
+    "provenance": "synthetic"
+  },
+  {
+    "id": "throttled",
+    "label": "Throttled",
+    "operations": [
+      "agent_completion",
+      "knowledge_search"
+    ],
+    "fault": "Synthetic HTTP 429 with seven-second hint",
+    "expected_code": "UPSTREAM_THROTTLED",
+    "provenance": "synthetic"
+  },
+  {
+    "id": "timeout",
+    "label": "Timeout",
+    "operations": [
+      "agent_completion",
+      "knowledge_search"
+    ],
+    "fault": "Immediate synthetic read timeout",
+    "expected_code": "UPSTREAM_TIMEOUT",
+    "provenance": "synthetic"
+  },
+  {
+    "id": "knowledge-empty",
+    "label": "Knowledge Empty",
+    "operations": [
+      "knowledge_search"
+    ],
+    "fault": "Valid empty Knowledge search",
+    "expected_code": "OK_EMPTY",
+    "provenance": "synthetic"
+  }
+]
